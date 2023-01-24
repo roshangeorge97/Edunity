@@ -1,6 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['src\\pages\\Chat.jsx','src\\pages\\SignIn.jsx','src\\pages\\Mentors.jsx','src\\pages\\Students.jsx','src\\pages\\Home.jsx','src\\pages\\Register.jsx'],
+  content: [
+    'src/pages/*.{html,jsx}',
+    'dist/*.{html,jsx}',
+    'index.html',
+  ],
 
   theme: {
     colors: {
