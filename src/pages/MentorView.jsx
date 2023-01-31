@@ -1,24 +1,21 @@
-import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/20/solid'
 import Navigation from './Navigation'
 import Navigation2 from './Navigation2'
 
 const navigation = [
-  { name: 'Explore', href: '/mentors', current: true },
-  { name: 'My Classes', href: '/signin', current: false },
+  { name: 'My Students', href: '/requests', current: true },
+  { name: 'Courses Offered', href: '/signin', current: false },
   { name: 'Marketplace', href: '/marketplace', current: false },
-  { name: 'Become a Mentor', href: '/mentor', current: false },
+  { name: 'Earnings', href: '/wallet', current: false },
 ]
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-function Home() {
-  return (
-    <>
-      <head>
+export default function MentorView(){
+    return(
+        <>
+         <head>
         <link href="/dist/output.css" rel="stylesheet"></link>
       </head>
       <Navigation2/>
@@ -103,8 +100,6 @@ function Home() {
         </div>
       </div>
     </div>
-    </>
-  )
+        </>
+    )
 }
-
-export default Home

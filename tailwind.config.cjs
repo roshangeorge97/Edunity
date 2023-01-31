@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  
   content: [
     'src/pages/*.{html,jsx}',
     'dist/*.{html,jsx}',
@@ -11,7 +12,10 @@ module.exports = {
       'yellow': '#E9D758',
       'black' : '#071013',
       'green' :'#4DA167',
+      'white' :'#ffffff',
+      'red' : '#ff0000',
     },
+    
     extend: {},
   },
   plugins: [

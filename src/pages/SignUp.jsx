@@ -3,7 +3,9 @@ import { createUserWithEmailAndPassword } from 'firebase/auth'
 import { auth } from '../../firebase-config'
 import {useState} from 'react'
 import { Navigate, useNavigate } from 'react-router-dom'
-
+import { addDoc } from 'firebase/firestore'
+import { collection } from 'firebase/firestore'
+import { db } from '../../firebase-config'
 
 export default function SignUp() {
   const [email,setEmail] = useState("")
@@ -13,9 +15,17 @@ export default function SignUp() {
     function register(e){
       e.preventDefault();
       createUserWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
+  .then(async (userCredential) => {
     // Signed in 
-    const user = userCredential.user;
+      const user = userCredential.user;
+      const docRef = await addDoc(collection(db, "users"), {
+        email: user.email,
+        pendingFriendRequests: [],
+        friends: []
+      });
+
+      console.log("Document written with ID: ", docRef.id);
+
     navigate("/signin");
     // ...
   })

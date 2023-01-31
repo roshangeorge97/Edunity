@@ -11,14 +11,14 @@ import { db } from "../../firebase-config";
 
 
 const navigation = [
-  { name: 'Explore', href: '/mentors', current: true },
-  { name: 'My Classes', href: '/classes', current: false },
+  { name: 'My Students', href: '/requests', current: true },
+  { name: 'Courses Offered', href: '/signin', current: false },
   { name: 'Marketplace', href: '/marketplace', current: false },
   { name: 'Discuss', href: '/discuss', current: false },
 
 ]
 
-export default function Navigation(){
+export default function Navigation2(){
   const [incomingRequests, setIncomingRequests] = useState([]);
   useEffect(() => {
     const unsub = onAuthStateChanged(auth,(user) => {
@@ -115,7 +115,7 @@ return () => unsub();
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <a href='/mentor'><button className='text-yellow ml-5 bg-green text-black font-medium py-2 px-4 rounded-lg hover:bg-green'>Become a Mentor</button></a>
+                <a href='/mentors'><button className='text-yellow ml-5 bg-green text-black font-medium py-2 px-4 rounded-lg hover:bg-green'>Student View</button></a>
                <a href='/cart'><div className='ml-3'> <svg fill="#E9D758" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
 	 width="20px" height="20px" viewBox="0 0 902.86 902.86"
 	 xml:space="preserve">
@@ -234,7 +234,7 @@ return () => unsub();
                   as="a"
                   href={item.href}
                   className={classNames(
-                    item.current ? 'bg-yellow-900 text-yellow' : 'text-gray-300 hover:bg-yellow-700 hover:text-yellow',
+                    item.current ? 'bg-yellow-900 text-yellow' : 'text-yellow hover:bg-yellow-700 hover:text-yellow',
                     'block px-3 py-2 rounded-md text-base font-medium'
                   )}
                   aria-current={item.current ? 'page' : undefined}

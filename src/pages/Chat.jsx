@@ -1,58 +1,64 @@
+import Navigation from "./Navigation";
+
 export default function Chat() {
     return (
       <>
+      <Navigation/>
          <head>
         <link href="/dist/output.css" rel="stylesheet"></link>
       </head>
-<div class="flex h-screen antialiased text-black bg-yellow">
+<div class="rounded flex h-screen antialiased text-black bg-yellow px-2">
     <div class="flex flex-row h-full w-full overflow-x-hidden">
-      <div class="flex flex-col py-8 pl-6 pr-2 w-64 bg-white flex-shrink-0">
-        <div class="flex flex-row items-center justify-center h-12 w-full">
-          <div
-            class="flex items-center justify-center rounded-2xl text-indigo-700 bg-indigo-100 h-10 w-10"
-          >
-            <svg
-              class="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"
-              ></path>
+    <div>
+
+<div class="mt-8 text-center">
+    <img src="https://tailus.io/sources/blocks/stats-cards/preview/images/second_user.webp" alt="" class="w-10 h-10 m-auto rounded-full object-cover lg:w-28 lg:h-28" />
+    <h5 class="hidden mt-4 text-xl font-semibold text-gray-600 lg:block">Hrishit Kapoor</h5>
+    <span class="hidden text-gray-400 lg:block">IIT Madras</span>
+</div>
+
+<ul class="space-y-2 tracking-wide mt-8">
+    <li>
+        <a href="#" class="px-4 py-3 flex items-center space-x-4 rounded-md text-gray-600 group">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path class="fill-current text-gray-300 group-hover:text-cyan-300" fill-rule="evenodd" d="M2 6a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1H8a3 3 0 00-3 3v1.5a1.5 1.5 0 01-3 0V6z" clip-rule="evenodd" />
+                <path class="fill-current text-gray-600 group-hover:text-cyan-600" d="M6 12a2 2 0 012-2h8a2 2 0 012 2v2a2 2 0 01-2 2H2h2a2 2 0 002-2v-2z" />
             </svg>
-          </div>
-          <div class="ml-2 font-bold text-2xl">QuickChat</div>
-        </div>
+            <span class="group-hover:text-gray-700">My Files</span>
+        </a>
+    </li>
+    <li>
+        <a href="#" class="px-4 py-3 flex items-center space-x-4 rounded-md text-gray-600 group">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path class="fill-current text-gray-600 group-hover:text-cyan-600" fill-rule="evenodd" d="M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z" clip-rule="evenodd" />
+                <path class="fill-current text-gray-300 group-hover:text-cyan-300" d="M15 7h1a2 2 0 012 2v5.5a1.5 1.5 0 01-3 0V7z" />
+            </svg>
+            <span class="group-hover:text-gray-700">My Tests</span>
+        </a>
+    </li>
+    <li>
+        <a href="#" class="px-4 py-3 flex items-center space-x-4 rounded-md text-gray-600 group">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path class="fill-current text-gray-600 group-hover:text-cyan-600" d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z" />
+                <path class="fill-current text-gray-300 group-hover:text-cyan-300" d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z" />
+            </svg>
+            <span class="group-hover:text-gray-700">Other data</span>
+        </a>
+    </li>
+    <li>
+        <a href="/requests" class="px-4 py-3 flex items-center space-x-4 rounded-md text-gray-600 group">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path class="fill-current text-gray-300 group-hover:text-cyan-300" d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z" />
+                <path class="fill-current text-gray-600 group-hover:text-cyan-600" fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd" />
+            </svg>
+            <span class="group-hover:text-gray-700">Send Mentor Request</span>
+        </a>
+    </li>
+</ul>
+</div>
+      <div class="flex flex-col flex-auto h-full p-4">
         <div
-          class="flex flex-col items-center bg-indigo-100 border border-yellow-200 mt-4 w-full py-6 px-4 rounded-lg"
-        >
-          <div class="h-20 w-20 rounded-full border overflow-hidden">
-            <img
-              src="https://avatars3.githubusercontent.com/u/2763884?s=128"
-              alt="Avatar"
-              class="h-full w-full"
-            />
-          </div>
-          <div class="text-sm font-semibold mt-2">Aminos Co.</div>
-          <div class="text-xs text-yellow-500">IIT Madras</div>
-          <div class="flex flex-row items-center mt-3">
-            <div
-              class="flex flex-col justify-center h-4 w-8 bg-indigo-500 rounded-full"
-            >
-              <div class="h-3 w-3 bg-white rounded-full self-end mr-1"></div>
-            </div>
-            <div class="leading-none ml-1 text-xs">Active</div>
-          </div>
-        </div>
-      </div>
-      <div class="flex flex-col flex-auto h-full p-6">
-        <div
-          class="flex flex-col flex-auto flex-shrink-0 rounded-2xl bg-yellow-100 h-full p-4"
+          class="text-black flex flex-col flex-auto flex-shrink-0 rounded-2xl bg-black h-full p-4"
         >
           <div class="flex flex-col h-full overflow-x-auto mb-4">
             <div class="flex flex-col h-full">
@@ -62,10 +68,10 @@ export default function Chat() {
                     <div
                       class="flex items-center justify-center h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0"
                     >
-                      Mentor
+                    <img src="src\assets\undraw_Male_avatar_re_nyu5 (1).png" class="cursor-pointer w-10 h-10 rounded-3xl mr-3" />
                     </div>
                     <div
-                      class="relative ml-3 text-sm bg-white py-2 px-4 shadow rounded-xl"
+                      class="relative ml-3 text-sm bg-yellow py-2 px-4 shadow rounded-xl"
                     >
                       <div>Hey How are you today?</div>
                     </div>
@@ -74,9 +80,9 @@ export default function Chat() {
                 <div class="col-start-6 col-end-13 p-3 rounded-lg">
                   <div class="flex items-center justify-start flex-row-reverse">
                     <div
-                      class="flex items-center justify-center h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0"
+                      class="flex  items-center justify-center h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0"
                     >
-                      Student
+                      <img src="src\assets\undraw_Male_avatar_re_nyu5 (1).png" class="cursor-pointer w-10 h-10 rounded-3xl mr-3" />
                     </div>
                     <div
                       class="relative mr-3 text-sm bg-yellow py-2 px-4 shadow rounded-xl"
@@ -90,10 +96,10 @@ export default function Chat() {
                     <div
                       class="flex items-center justify-center h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0"
                     >
-                      Mentor
+                      <img src="src\assets\undraw_Male_avatar_re_nyu5 (1).png" class="cursor-pointer w-10 h-10 rounded-3xl mr-3" />
                     </div>
                     <div
-                      class="relative ml-3 text-sm bg-white py-2 px-4 shadow rounded-xl"
+                      class="relative ml-3 text-sm bg-yellow py-2 px-4 shadow rounded-xl"
                     >
                       <div> Let's have a connect through a call, it would be easier to explain..</div>
                     </div>
@@ -102,33 +108,26 @@ export default function Chat() {
                 <div class="col-start-6 col-end-13 p-3 rounded-lg">
                   <div class="flex items-center justify-start flex-row-reverse">
                     <div
-                      class="flex items-center justify-center h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0"
+                      class="flex  items-center justify-center h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0"
                     >
-                      Student
+                      <img src="src\assets\undraw_Male_avatar_re_nyu5 (1).png" class="cursor-pointer w-10 h-10 rounded-3xl mr-3" />
                     </div>
                     <div
-                      class="relative mr-3 text-sm bg-indigo-100 py-2 px-4 shadow rounded-xl"
+                      class="relative mr-3 text-sm bg-yellow py-2 px-4 shadow rounded-xl"
                     >
-                      <div>
-                        yes sure!  I would like to make you as my personal mentor, please accept my request! 
-                      </div>
-                      <div
-                        class="absolute text-xs bottom-0 right-0 -mb-5 mr-2 text-yellow-500"
-                      >
-                        Seen
-                      </div>
+                      <div>Hi sir, I am having a doubt in this question, here is the picture..</div>
                     </div>
                   </div>
-                </div>
+                </div>   
                 <div class="col-start-1 col-end-8 p-3 rounded-lg">
                   <div class="flex flex-row items-center">
                     <div
                       class="flex items-center justify-center h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0"
                     >
-                      Mentor
+                      <img src="src\assets\undraw_Male_avatar_re_nyu5 (1).png" class="cursor-pointer w-10 h-10 rounded-3xl mr-3" />
                     </div>
                     <div
-                      class="relative ml-3 text-sm bg-white py-2 px-4 shadow rounded-xl"
+                      class="relative ml-3 text-sm bg-yellow py-2 px-4 shadow rounded-xl"
                     >
                       <div>
                       Hope your doubts are solved. 
@@ -141,17 +140,17 @@ export default function Chat() {
                     <div
                       class="flex items-center justify-center h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0"
                     >
-                      Mentor
+                      <img src="src\assets\undraw_Male_avatar_re_nyu5 (1).png" class="cursor-pointer w-10 h-10 rounded-3xl mr-3" />
                       </div>
                     <div
-                      class="relative ml-3 text-sm bg-white py-2 px-4 shadow rounded-xl"
+                      class="relative ml-3 text-sm bg-yellow py-2 px-4 shadow rounded-xl"
                     >
                       <div class="flex flex-row items-center">
                         <button
                           class="flex items-center justify-center bg-indigo-600 hover:bg-indigo-800 rounded-full h-8 w-10"
                         >
                           <svg
-                            class="w-6 h-6 text-white"
+                            class="w-6 h-6 text-black"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -172,37 +171,37 @@ export default function Chat() {
                           </svg>
                         </button>
                         <div class="flex flex-row items-center space-x-px ml-4">
-                          <div class="h-2 w-1 bg-yellow-500 rounded-lg"></div>
-                          <div class="h-2 w-1 bg-yellow-500 rounded-lg"></div>
-                          <div class="h-4 w-1 bg-yellow-500 rounded-lg"></div>
-                          <div class="h-8 w-1 bg-yellow-500 rounded-lg"></div>
-                          <div class="h-8 w-1 bg-yellow-500 rounded-lg"></div>
-                          <div class="h-10 w-1 bg-yellow-500 rounded-lg"></div>
-                          <div class="h-10 w-1 bg-yellow-500 rounded-lg"></div>
-                          <div class="h-12 w-1 bg-yellow-500 rounded-lg"></div>
-                          <div class="h-10 w-1 bg-yellow-500 rounded-lg"></div>
-                          <div class="h-6 w-1 bg-yellow-500 rounded-lg"></div>
-                          <div class="h-5 w-1 bg-yellow-500 rounded-lg"></div>
-                          <div class="h-4 w-1 bg-yellow-500 rounded-lg"></div>
-                          <div class="h-3 w-1 bg-yellow-500 rounded-lg"></div>
-                          <div class="h-2 w-1 bg-yellow-500 rounded-lg"></div>
-                          <div class="h-2 w-1 bg-yellow-500 rounded-lg"></div>
-                          <div class="h-2 w-1 bg-yellow-500 rounded-lg"></div>
-                          <div class="h-10 w-1 bg-yellow-500 rounded-lg"></div>
-                          <div class="h-2 w-1 bg-yellow-500 rounded-lg"></div>
-                          <div class="h-10 w-1 bg-yellow-500 rounded-lg"></div>
-                          <div class="h-8 w-1 bg-yellow-500 rounded-lg"></div>
-                          <div class="h-8 w-1 bg-yellow-500 rounded-lg"></div>
-                          <div class="h-1 w-1 bg-yellow-500 rounded-lg"></div>
-                          <div class="h-1 w-1 bg-yellow-500 rounded-lg"></div>
-                          <div class="h-2 w-1 bg-yellow-500 rounded-lg"></div>
-                          <div class="h-8 w-1 bg-yellow-500 rounded-lg"></div>
-                          <div class="h-8 w-1 bg-yellow-500 rounded-lg"></div>
-                          <div class="h-2 w-1 bg-yellow-500 rounded-lg"></div>
-                          <div class="h-2 w-1 bg-yellow-500 rounded-lg"></div>
-                          <div class="h-2 w-1 bg-yellow-500 rounded-lg"></div>
-                          <div class="h-2 w-1 bg-yellow-500 rounded-lg"></div>
-                          <div class="h-4 w-1 bg-yellow-500 rounded-lg"></div>
+                          <div class="h-2 w-1 bg-black-500 rounded-lg"></div>
+                          <div class="h-2 w-1 bg-black-500 rounded-lg"></div>
+                          <div class="h-4 w-1 bg-black-500 rounded-lg"></div>
+                          <div class="h-8 w-1 bg-black-500 rounded-lg"></div>
+                          <div class="h-8 w-1 bg-black-500 rounded-lg"></div>
+                          <div class="h-10 w-1 bg-black-500 rounded-lg"></div>
+                          <div class="h-10 w-1 bg-black-500 rounded-lg"></div>
+                          <div class="h-12 w-1 bg-black-500 rounded-lg"></div>
+                          <div class="h-10 w-1 bg-black-500 rounded-lg"></div>
+                          <div class="h-6 w-1 bg-black-500 rounded-lg"></div>
+                          <div class="h-5 w-1 bg-black-500 rounded-lg"></div>
+                          <div class="h-4 w-1 bg-black-500 rounded-lg"></div>
+                          <div class="h-3 w-1 bg-black-500 rounded-lg"></div>
+                          <div class="h-2 w-1 bg-black-500 rounded-lg"></div>
+                          <div class="h-2 w-1 bg-black-500 rounded-lg"></div>
+                          <div class="h-2 w-1 bg-black-500 rounded-lg"></div>
+                          <div class="h-10 w-1 bg-black-500 rounded-lg"></div>
+                          <div class="h-2 w-1 bg-black-500 rounded-lg"></div>
+                          <div class="h-10 w-1 bg-black-500 rounded-lg"></div>
+                          <div class="h-8 w-1 bg-black-500 rounded-lg"></div>
+                          <div class="h-8 w-1 bg-black-500 rounded-lg"></div>
+                          <div class="h-1 w-1 bg-black-500 rounded-lg"></div>
+                          <div class="h-1 w-1 bg-black-500 rounded-lg"></div>
+                          <div class="h-2 w-1 bg-black-500 rounded-lg"></div>
+                          <div class="h-8 w-1 bg-black-500 rounded-lg"></div>
+                          <div class="h-8 w-1 bg-black-500 rounded-lg"></div>
+                          <div class="h-2 w-1 bg-black-500 rounded-lg"></div>
+                          <div class="h-2 w-1 bg-black-500 rounded-lg"></div>
+                          <div class="h-2 w-1 bg-black-500 rounded-lg"></div>
+                          <div class="h-2 w-1 bg-black-500 rounded-lg"></div>
+                          <div class="h-4 w-1 bg-black-500 rounded-lg"></div>
                         </div>
                       </div>
                     </div>
@@ -211,21 +210,14 @@ export default function Chat() {
                 <div class="col-start-6 col-end-13 p-3 rounded-lg">
                   <div class="flex items-center justify-start flex-row-reverse">
                     <div
-                      class="flex items-center justify-center h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0"
+                      class="flex  items-center justify-center h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0"
                     >
-                      Student
+                      <img src="src\assets\undraw_Male_avatar_re_nyu5 (1).png" class="cursor-pointer w-10 h-10 rounded-3xl mr-3" />
                     </div>
                     <div
-                      class="relative mr-3 text-sm bg-indigo-100 py-2 px-4 shadow rounded-xl"
+                      class="relative mr-3 text-sm bg-yellow py-2 px-4 shadow rounded-xl"
                     >
-                      <div>
-                         I would like to make you as my personal mentor, please accept my request! 
-                      </div>
-                      <div
-                        class="absolute text-xs bottom-0 right-0 -mb-5 mr-2 text-yellow-500"
-                      >
-                        Seen
-                      </div>
+                      <div>I would like to make you as a Personal Mentor! Please accept my request.</div>
                     </div>
                   </div>
                 </div>
@@ -237,7 +229,7 @@ export default function Chat() {
           >
             <div>
               <button
-                class="flex items-center justify-center text-yellow-400 hover:text-yellow-600"
+                class="flex items-center justify-center text-black hover:text-black"
               >
                 <svg
                   class="w-5 h-5"
@@ -259,10 +251,10 @@ export default function Chat() {
               <div class="relative w-full">
                 <input
                   type="text"
-                  class="flex w-full border rounded-xl focus:outline-none focus:border-indigo-300 pl-4 h-10"
+                  class="text-black flex w-full border rounded-xl focus:outline-none focus:border-indigo-300 pl-4 h-10"
                 />
                 <button
-                  class="absolute flex items-center justify-center h-full w-12 right-0 top-0 text-yellow-400 hover:text-yellow-600"
+                  class="absolute flex items-center justify-center h-full w-12 right-0 top-0 text-black hover:text-black"
                 >
                   <svg
                     class="w-6 h-6"
@@ -283,7 +275,7 @@ export default function Chat() {
             </div>
             <div class="ml-4">
               <button
-                class="flex items-center justify-center bg-indigo-500 hover:bg-green rounded-xl text-white px-4 py-1 flex-shrink-0"
+                class="flex items-center justify-center bg-indigo-500 hover:bg-green rounded-xl text-black px-4 py-1 flex-shrink-0"
               >
                 <span>Send</span>
                 <span class="ml-2">
