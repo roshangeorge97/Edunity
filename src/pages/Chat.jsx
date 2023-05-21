@@ -1,19 +1,49 @@
+import { useEffect } from "react";
 import Navigation from "./Navigation";
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../../firebase-config";
+import { useState } from "react";
+import { getAuth } from "firebase/auth";
+import { useLocation } from "react-router-dom";
 
-export default function Chat() {
+
+export default function Chat() {   
+  const { state } = useLocation();
+    const [data, setData] = useState([]); 
+
+    useEffect(() => {  
+      mentorsget();
+    },[])
+  
+    const mentorsget= async ()=>{
+      
+      const docRef = doc(db, "mentors", state.post_id);
+      const docSnap = await getDoc(docRef);
+      
+      if (docSnap.exists()) {
+        const data =  docSnap.data().data;
+        console.log(data)
+        setData(JSON.stringify(data))
+      } else {
+        // docSnap.data() will be undefined in this case
+        console.log("No such document!");
+      }
+  }
     return (
       <>
+      
       <Navigation/>
          <head>
         <link href="/dist/output.css" rel="stylesheet"></link>
       </head>
+      {data && Object.keys(data).length > 0 && 
 <div class="rounded flex h-screen antialiased text-black bg-yellow px-2">
     <div class="flex flex-row h-full w-full overflow-x-hidden">
     <div>
 
 <div class="mt-8 text-center">
-    <img src="https://tailus.io/sources/blocks/stats-cards/preview/images/second_user.webp" alt="" class="w-10 h-10 m-auto rounded-full object-cover lg:w-28 lg:h-28" />
-    <h5 class="hidden mt-4 text-xl font-semibold text-gray-600 lg:block">Hrishit Kapoor</h5>
+    <img src="https://drive.google.com/uc?export=view&id=1Dd3Vsx2Xz0lmoMZrwPWcd-ir-6oGRue8" alt="" class="w-10 h-10 m-auto rounded-full object-cover lg:w-28 lg:h-28" />
+    <h5 class="hidden mt-4 text-xl font-semibold text-gray-600 lg:block">{`${JSON.parse(data).firstName} ${JSON.parse(data).lastName}`}</h5>
     <span class="hidden text-gray-400 lg:block">IIT Madras</span>
 </div>
 
@@ -54,6 +84,15 @@ export default function Chat() {
             <span class="group-hover:text-gray-700">Send Mentor Request</span>
         </a>
     </li>
+    <li>
+        <a href="/requests" class="px-4 py-3 flex items-center space-x-4 rounded-md text-gray-600 group">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path class="fill-current text-gray-300 group-hover:text-cyan-300" d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z" />
+                <path class="fill-current text-gray-600 group-hover:text-cyan-600" fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd" />
+            </svg>
+            <span class="group-hover:text-gray-700">{`${JSON.parse(data).phone}`}</span>
+        </a>
+    </li>
 </ul>
 </div>
       <div class="flex flex-col flex-auto h-full p-4">
@@ -68,7 +107,7 @@ export default function Chat() {
                     <div
                       class="flex items-center justify-center h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0"
                     >
-                    <img src="src\assets\undraw_Male_avatar_re_nyu5 (1).png" class="cursor-pointer w-10 h-10 rounded-3xl mr-3" />
+                    <img src="https://drive.google.com/uc?export=view&id=1hVfPitn3aIPZUTzD3JDV6R9h4WO4CS6D" class="cursor-pointer w-10 h-10 rounded-3xl mr-3" />
                     </div>
                     <div
                       class="relative ml-3 text-sm bg-yellow py-2 px-4 shadow rounded-xl"
@@ -82,7 +121,7 @@ export default function Chat() {
                     <div
                       class="flex  items-center justify-center h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0"
                     >
-                      <img src="src\assets\undraw_Male_avatar_re_nyu5 (1).png" class="cursor-pointer w-10 h-10 rounded-3xl mr-3" />
+                      <img src="https://drive.google.com/uc?export=view&id=1hVfPitn3aIPZUTzD3JDV6R9h4WO4CS6D" class="cursor-pointer w-10 h-10 rounded-3xl mr-3" />
                     </div>
                     <div
                       class="relative mr-3 text-sm bg-yellow py-2 px-4 shadow rounded-xl"
@@ -96,7 +135,7 @@ export default function Chat() {
                     <div
                       class="flex items-center justify-center h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0"
                     >
-                      <img src="src\assets\undraw_Male_avatar_re_nyu5 (1).png" class="cursor-pointer w-10 h-10 rounded-3xl mr-3" />
+                      <img src="https://drive.google.com/uc?export=view&id=1hVfPitn3aIPZUTzD3JDV6R9h4WO4CS6D" class="cursor-pointer w-10 h-10 rounded-3xl mr-3" />
                     </div>
                     <div
                       class="relative ml-3 text-sm bg-yellow py-2 px-4 shadow rounded-xl"
@@ -110,7 +149,7 @@ export default function Chat() {
                     <div
                       class="flex  items-center justify-center h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0"
                     >
-                      <img src="src\assets\undraw_Male_avatar_re_nyu5 (1).png" class="cursor-pointer w-10 h-10 rounded-3xl mr-3" />
+                      <img src="https://drive.google.com/uc?export=view&id=1hVfPitn3aIPZUTzD3JDV6R9h4WO4CS6D" class="cursor-pointer w-10 h-10 rounded-3xl mr-3" />
                     </div>
                     <div
                       class="relative mr-3 text-sm bg-yellow py-2 px-4 shadow rounded-xl"
@@ -124,7 +163,7 @@ export default function Chat() {
                     <div
                       class="flex items-center justify-center h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0"
                     >
-                      <img src="src\assets\undraw_Male_avatar_re_nyu5 (1).png" class="cursor-pointer w-10 h-10 rounded-3xl mr-3" />
+                      <img src="https://drive.google.com/uc?export=view&id=1hVfPitn3aIPZUTzD3JDV6R9h4WO4CS6D" class="cursor-pointer w-10 h-10 rounded-3xl mr-3" />
                     </div>
                     <div
                       class="relative ml-3 text-sm bg-yellow py-2 px-4 shadow rounded-xl"
@@ -140,7 +179,7 @@ export default function Chat() {
                     <div
                       class="flex items-center justify-center h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0"
                     >
-                      <img src="src\assets\undraw_Male_avatar_re_nyu5 (1).png" class="cursor-pointer w-10 h-10 rounded-3xl mr-3" />
+                      <img src="https://drive.google.com/uc?export=view&id=1hVfPitn3aIPZUTzD3JDV6R9h4WO4CS6D" class="cursor-pointer w-10 h-10 rounded-3xl mr-3" />
                       </div>
                     <div
                       class="relative ml-3 text-sm bg-yellow py-2 px-4 shadow rounded-xl"
@@ -212,7 +251,7 @@ export default function Chat() {
                     <div
                       class="flex  items-center justify-center h-10 w-10 rounded-full bg-indigo-500 flex-shrink-0"
                     >
-                      <img src="src\assets\undraw_Male_avatar_re_nyu5 (1).png" class="cursor-pointer w-10 h-10 rounded-3xl mr-3" />
+                      <img src="https://drive.google.com/uc?export=view&id=1hVfPitn3aIPZUTzD3JDV6R9h4WO4CS6D" class="cursor-pointer w-10 h-10 rounded-3xl mr-3" />
                     </div>
                     <div
                       class="relative mr-3 text-sm bg-yellow py-2 px-4 shadow rounded-xl"
@@ -301,6 +340,7 @@ export default function Chat() {
       </div>
     </div>
   </div>
+}
   </>
   )
 }

@@ -21,11 +21,11 @@ function Home() {
       <head>
         <link href="/dist/output.css" rel="stylesheet"></link>
       </head>
-      <Navigation2/>
+      <Navigation/>
 
     <div className="relative overflow-hidden bg-black">
-      <div className="flex pt-16 pb-0 sm:pt-24 sm:pb-24 lg:pt-40 lg:pb-16">
-        <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
+      <div className="flex pt-16 pb-24 sm:pt-24 sm:pb-0 lg:pt-40 lg:pb-16">
+        <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 py-8 sm:py-0 lg:px-8">
           <div className="sm:max-w-lg">
             <h1 className="font text-4xl font-bold tracking-tight text-yellow sm:text-6xl">
               Find Your Personal Mentor, boost Grades!
@@ -45,15 +45,15 @@ function Home() {
               </a>
             </div>
           </div>
-        </div>
-       <img className='w-3x1 h-3x1' src='src\assets\undraw_education_f8ru (1).svg'/>         
+        </div>                                                                                         
+       <img className='hidden w-3x1 h-3x1 sm:block' src='https://drive.google.com/uc?export=view&id=1vBY6fqRWPov53eKDNqTOpEkYjPgmRPQP'/>         
       </div>
     </div>
 
     <div className="relative overflow-hidden bg-yellow text-black">
-      <div className="flex pt-16 pb-0 sm:pt-24 sm:pb-24 lg:pt-40 lg:pb-16">
-       <img className='w-3x1 h-3x1' src='src\assets\undraw_savings_re_eq4w (2).svg'/>       
-       <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
+      <div className="flex pt-8 pb-0 sm:pt-24 sm:pb-24 lg:pt-40 lg:pb-16">
+       <img className='w-3x1 h-3x1 hidden sm:block' src='https://drive.google.com/uc?export=view&id=1M6D9s9CKLUADEaIlhWsTmMLn43IpoTHW'/>       
+       <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8  py-8 sm:py-0 ">
           <div className="sm:max-w-lg">
             <h1 className="font text-4xl font-bold tracking-tight text-black sm:text-6xl">
               Register as mentor, start your side hustle!
@@ -67,7 +67,7 @@ function Home() {
               {/* Decorative image grid */}
               <a
                 href="/mentors"
-                className="text-black inline-block rounded-md border border-transparent bg-yellow py-3 px-8 text-center font-medium text-white hover:bg-green hover:text-yellow"
+                className=" text-black inline-block rounded-md border border-transparent bg-yellow py-3 px-8 text-center font-medium text-white hover:bg-green hover:text-yellow"
               >
                 Learn More
               </a>

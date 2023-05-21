@@ -43,13 +43,13 @@ export default function MentorView(){
             </div>
           </div>
         </div>
-       <img className='w-3x1 h-3x1' src='src\assets\undraw_education_f8ru (1).svg'/>         
+       <img className='w-3x1 h-3x1' src='https://drive.google.com/uc?export=view&id=12wmoowYG4RFqK7XlhYK4EspH8gOM-bbR'/>         
       </div>
     </div>
 
     <div className="relative overflow-hidden bg-yellow text-black">
       <div className="flex pt-16 pb-0 sm:pt-24 sm:pb-24 lg:pt-40 lg:pb-16">
-       <img className='w-3x1 h-3x1' src='src\assets\undraw_savings_re_eq4w (2).svg'/>       
+       <img className='w-3x1 h-3x1' src='https://drive.google.com/uc?export=view&id=1XkZE7fiaagVSZ5AfCzeDMSvkcF_zzZh0'/>       
        <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
           <div className="sm:max-w-lg">
             <h1 className="font text-4xl font-bold tracking-tight text-black sm:text-6xl">

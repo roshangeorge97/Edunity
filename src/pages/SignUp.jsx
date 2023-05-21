@@ -6,6 +6,8 @@ import { Navigate, useNavigate } from 'react-router-dom'
 import { addDoc } from 'firebase/firestore'
 import { collection } from 'firebase/firestore'
 import { db } from '../../firebase-config'
+import { setDoc } from 'firebase/firestore'
+import { doc } from 'firebase/firestore'
 
 export default function SignUp() {
   const [email,setEmail] = useState("")
@@ -18,13 +20,40 @@ export default function SignUp() {
   .then(async (userCredential) => {
     // Signed in 
       const user = userCredential.user;
-      const docRef = await addDoc(collection(db, "users"), {
+      const uid = user.uid
+
+      const myDocRef = doc(db, "users", uid);
+      const data = {
         email: user.email,
         pendingFriendRequests: [],
-        friends: []
-      });
+        friends: [],
+        incomingFriendRequests:[],
+      };
 
-      console.log("Document written with ID: ", docRef.id);
+
+         setDoc(myDocRef, data)
+  .then(() => {
+    console.log("Document successfully written!");
+  })
+  .catch((error) => {
+    console.error("Error writing document: ", error);
+  });
+
+//       const customUid = "myCustomUid";
+// const myCollectionRef = collection(db, "myCollection");
+
+// const data = {
+//   // Your data here
+// };
+
+// addDoc(myCollectionRef, { ...data, id: customUid })
+//   .then(() => {
+//     console.log("Document successfully added!");
+//   })
+//   .catch((error) => {
+//     console.error("Error adding document: ", error);
+//   });
+
 
     navigate("/signin");
     // ...
@@ -34,9 +63,15 @@ export default function SignUp() {
     alert("User already exists, please Login!")
     const errorCode = error.code;
     const errorMessage = error.message;
+    console.log(errorMessage,errorCode)
     // ..
   });
     }
+   
+
+    
+
+// Set the user's name and email
 
   return (
     <>

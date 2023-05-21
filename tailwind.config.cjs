@@ -3,7 +3,6 @@ module.exports = {
   
   content: [
     'src/pages/*.{html,jsx}',
-    'dist/*.{html,jsx}',
     'index.html',
   ],
 

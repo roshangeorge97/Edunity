@@ -21,6 +21,8 @@ import Cart from "./pages/Cart"
 import MentorView from "./pages/MentorView"
 import Wallet from "./pages/Wallet"
 import Profile from "./pages/Profile"
+import { ViewProfile } from "./pages/ViewProfile"
+import { Chat1 } from "./pages/Chat1"
 
 function App() {
   return (
@@ -48,6 +50,8 @@ function App() {
         <Route path="/mentorview" element={ <MentorView/> }></Route>
         <Route path="/wallet" element={ <Wallet/> }></Route>
         <Route path="/profile" element={ <Profile/> }></Route>       
+        <Route path="/mentorprofile" element={ <ViewProfile /> }></Route>
+        <Route path="/chat1" element={ <Chat1 /> }></Route>
       </Routes>
       </BrowserRouter>
   )

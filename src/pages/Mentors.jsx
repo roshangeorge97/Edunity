@@ -1,18 +1,17 @@
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Navigation from "./Navigation";
 import { db } from "../../firebase-config";
-import { updateDoc,doc,collection, addDoc,arrayUnion,arrayRemove} from "firebase/firestore"; 
+import { getDocs } from "firebase/firestore";
+import { updateDoc,doc,collection, addDoc,arrayUnion,arrayRemove,query,where} from "firebase/firestore"; 
 import { auth } from "../../firebase-config";
 import { useState,useEffect } from "react";
 import { onSnapshot } from "firebase/firestore";
 import { onAuthStateChanged } from "firebase/auth";
-import { getDoc } from "firebase/firestore";
 import { Fragment } from 'react'
 import { Dialog, Disclosure, Menu, Transition } from '@headlessui/react'
-import { XMarkIcon } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, FunnelIcon, MinusIcon, PlusIcon, Squares2X2Icon } from '@heroicons/react/20/solid'
-import Search from "./Search";
 import Search1 from "./Search1";
+import { useNavigation } from "react-router-dom";
 
 const subjects = [
   { name: 'Relevence', href: '#', current: true },
@@ -59,49 +58,49 @@ const subCategories = [
   { name: 'Biology', href: '#' },
 ]
 
-
+//
 
 const products = [
     {
         id: 1,
-        name: 'Physics',
-        price: 'Rishwanth K',
-        imageSrc: 'src\\assets\\undraw_Male_avatar_re_nyu5 (1).png',
+        name: "email",
+        price: "name",
+        imageSrc: 'https://drive.google.com/uc?export=view&id=1hVfPitn3aIPZUTzD3JDV6R9h4WO4CS6D',
         imageAlt: 'Tall slender porcelain bottle with natural clay textured body and cork stopper.',
       },
       {
         id: 2,
         name: 'Chemistry',
         price: 'Pranav Makur',
-        imageSrc: 'src\\assets\\undraw_Male_avatar_re_nyu5 (1).png',
+        imageSrc: 'https://drive.google.com/uc?export=view&id=1hVfPitn3aIPZUTzD3JDV6R9h4WO4CS6D',
         imageAlt: 'Olive drab green insulated bottle with flared screw lid and flat top.',
       },
       {
         id: 3,
         name: 'Biology',
         price: 'Gosalya G',
-        imageSrc: 'src\\assets\\undraw_Male_avatar_re_nyu5 (1).png',
+        imageSrc: 'https://drive.google.com/uc?export=view&id=1hVfPitn3aIPZUTzD3JDV6R9h4WO4CS6D',
         imageAlt: 'Person using a pen to cross a task off a productivity paper card.',
       },
       {
         id: 4,
         name: 'Maths',
         price: 'Timberlake Chan',
-        imageSrc: 'src\\assets\\undraw_Male_avatar_re_nyu5 (1).png',
+        imageSrc: 'https://drive.google.com/uc?export=view&id=1hVfPitn3aIPZUTzD3JDV6R9h4WO4CS6D',
         imageAlt: 'Hand holding black machined steel mechanical pencil with brass tip and top.',
       },
     {
       id: 1,
       name: 'Physics',
       price: 'Rishwanth K',
-      imageSrc: 'src\\assets\\undraw_Male_avatar_re_nyu5 (1).png',
+      imageSrc: 'https://drive.google.com/uc?export=view&id=1hVfPitn3aIPZUTzD3JDV6R9h4WO4CS6D',
       imageAlt: 'Tall slender porcelain bottle with natural clay textured body and cork stopper.',
     },
     {
       id: 2,
       name: 'Chemistry',
       price: 'Pranav Makur',
-      imageSrc:'src\\assets\\undraw_Male_avatar_re_nyu5 (1).png',
+      imageSrc:'https://drive.google.com/uc?export=view&id=1hVfPitn3aIPZUTzD3JDV6R9h4WO4CS6D',
       imageAlt: 'Olive drab green insulated bottle with flared screw lid and flat top.',
     },
     {
@@ -109,14 +108,14 @@ const products = [
       name: 'Biology',
       
       price: 'Gosalya G',
-      imageSrc: 'src\\assets\\undraw_Male_avatar_re_nyu5 (1).png',
+      imageSrc: 'https://drive.google.com/uc?export=view&id=1hVfPitn3aIPZUTzD3JDV6R9h4WO4CS6D',
       imageAlt: 'Person using a pen to cross a task off a productivity paper card.',
     },
     {
       id: 4,
       name: 'Maths',
       price: 'Timberlake Chan',
-      imageSrc: 'src\\assets\\undraw_Male_avatar_re_nyu5 (1).png',
+      imageSrc: 'https://drive.google.com/uc?export=view&id=1hVfPitn3aIPZUTzD3JDV6R9h4WO4CS6D',
       imageAlt: 'Hand holding black machined steel mechanical pencil with brass tip and top.',
     },
     // More products...
@@ -126,100 +125,101 @@ const products = [
 }
   
   export default function Mentors() {
-   const currentUser = auth.currentUser;
-   const [incomingRequests, setIncomingRequests] = useState([]);
-   const [isButtonVisible, setIsButtonVisible] = useState(false);
-   const [friends,setFriends] = useState([]);
-   const [toggle,setToggle] = useState(false);
-
-
-    function handleFriendRequest() {
-             // Get current user
-             const currentUser = auth.currentUser;
-             // Reference current user's document in the "users" collection
-             const currentUserRef = doc(db,"users","OlspoWznSsmQ4XLfjRvN");
-           
-             // Reference friend's document in the "users" collection
-             const friendRef = doc(db,"users","N7YBLxRR7rB5Ys9ykV1p");
-           
-             // Add friendId to current user's pendingFriendRequests
-             updateDoc(currentUserRef,{
-               pendingFriendRequests: arrayUnion("N7YBLxRR7rB5Ys9ykV1p")
-             });
-           
-             // Add current user's id to friend's incomingFriendRequests
-             updateDoc(friendRef,{
-               incomingFriendRequests: arrayUnion("OlspoWznSsmQ4XLfjRvN")
-             });       
-    }
-
-
-    function handleAcceptRequest(index) {    
-      // Reference current user's document in the "users" collection
-      const currentUserRef = doc(db,"users","OlspoWznSsmQ4XLfjRvN");
-    
-      // Reference friend's document in the "users" collection
-      const friendRef = doc(db,"users","N7YBLxRR7rB5Ys9ykV1p");
-
-      // Add friendId to current user's friends
-      updateDoc(currentUserRef,{
-        friends: arrayUnion("N7YBLxRR7rB5Ys9ykV1p")
-      });
-    
-      // Add current user's id to friend's friends
-      updateDoc(friendRef,{
-        friends: arrayUnion("OlspoWznSsmQ4XLfjRvN")
-      });
-
-      // remove friend request from pending list
-      updateDoc(currentUserRef,{
-        pendingFriendRequests: arrayRemove("N7YBLxRR7rB5Ys9ykV1p")
-      });
-
-      updateDoc(friendRef,{
-        incomingFriendRequests: arrayRemove("OlspoWznSsmQ4XLfjRvN")
-      });
-    }
-
-    useEffect(() => {
-      const unsub = onAuthStateChanged(auth,(user) => {
-        if (user) {
-    // Get the user document from the "users" collection
-    const unsubscribe = onSnapshot(doc(db, "users", "N7YBLxRR7rB5Ys9ykV1p"), (doc) => {
-      // check if the data is from the server or local
-      const source = doc.metadata.hasPendingWrites ? "Local" : "Server";
-      console.log(doc.data());
-      setIncomingRequests(doc.data().incomingFriendRequests);
-      setFriends(doc.data().friends);
-      console.log("r",incomingRequests);
-      if (friends.length > 0) {
-        setIsButtonVisible(true);
-      }
-    });
-    return () => unsubscribe();
-  }
-});
-  return () => unsub();
+    const navigate = useNavigate();
   
-}, []);
+
+   const [isButtonVisible, setIsButtonVisible] = useState(false);
+   const [toggle,setToggle] = useState(false);
+   const [mentors,setMentors] = useState([]);
+   const [selectedSubject, setSelectedSubject] = useState(null);
+
+
+
+    useEffect(() => {  
+      mentorsget();
+    },[])
+
+
+    const handleView = (id) => {
+      navigate('/mentorprofile',
+            {
+                state: {
+                    post_id: id,
+                }
+            });
+          }
+
+async function handleFriendRequest(email) {
+  const currentUser = auth.currentUser;
+  console.log(currentUser.uid);
+
+  // Reference current user's document in the "users" collection
+  const currentUserRef = doc(db,"users",currentUser.uid);
+
+  // Search for a user document with a matching email
+  const usersRef = collection(db, "users");
+  const queryRef = query(usersRef, where("email", "==", email));
+  const querySnapshot = await getDocs(queryRef);
+
+  // Get the UID of the matched user document
+  let friendId = null;
+  querySnapshot.forEach((doc) => {
+    friendId = doc.id;
+  });
+
+  if (friendId) {
+    // Reference friend's document in the "users" collection
+    const friendRef = doc(db,"users",friendId);
+
+    // Add friendId to current user's pendingFriendRequests
+    await updateDoc(currentUserRef,{
+      pendingFriendRequests: arrayUnion(friendId)
+    });
+
+    // Add current user's id to friend's incomingFriendRequests
+    await updateDoc(friendRef,{
+      incomingFriendRequests: arrayUnion(currentUser.uid)
+    });
+  } else {
+    console.log("User not found");
+  }
+}
+
+const mentorsget= async ()=>{
+  
+  const data = await getDocs(collection(db, "mentors"));
+  // doc.data() is never undefined for query doc snapshots
+  console.log(data.docs);
+  setMentors(data.docs.map((doc)=>({ ...doc.data(), id: doc.id})))
+  
+      }
+
+ 
+const filteredMentors = selectedSubject ? mentors.filter((doc) => doc.data.subject === selectedSubject) : mentors;
 
   
     return (
         <>
         <Navigation />
       <div className="bg-black flex text-yellow">
-        <div className="w-1/4 p-5">
+        <div className="w-1/4 p-5 hidden sm:block">
           <h2 className="bold decoration-8 font-semibold">Filters</h2>
           <form className="mt-4 border-t border-gray-200">
                     <h3 className="sr-only">Categories</h3>
                     <ul role="list" className="px-2 py-3 font-medium text-gray-900">
-                      {subCategories.map((category) => (
-                        <li key={category.name}>
-                          <a href={category.href} className="block px-2 py-3">
-                            {category.name}
-                          </a>
-                        </li>
-                      ))}
+                    <li>
+  <button  type="button" className="block px-2 py-3" onClick={() => setSelectedSubject('Physics')}>Physics</button>
+</li>
+<li>
+  <button  type="button" className="block px-2 py-3" onClick={() => setSelectedSubject('Chemistry')}>Chemistry</button>
+</li>
+<li>
+  <button  type="button" className="block px-2 py-3" onClick={() => setSelectedSubject('Maths')}>Maths</button>
+</li>
+<li>
+  <button  type="button" className="block px-2 py-3" onClick={() => setSelectedSubject('Biology')}>Biology</button>
+</li>
+                      
                  <div class="ml-0 flex items-center justify-between">
                   <h3 className="text-yellow">Online</h3>
 	<input
@@ -227,6 +227,7 @@ const products = [
         class="appearance-none w-9 focus:outline-none checked:bg-yellow-28 h-5 bg-gray-300 rounded-full before:inline-block before:rounded-full before:bg-yellow-89 before:h-4 before:w-4 checked:before:translate-x-full shadow-inner transition-all duration-300 before:ml-0.5"
         checked={toggle}
         onChange={()=>setToggle(true)}
+        
     />
 </div>
                     </ul>
@@ -280,7 +281,7 @@ const products = [
         {toggle ?<p className="text-2xl bold text-yellow decoration-8 font-semibold flex">Mentors Online<div className="myAnim bg-green w-3 h-3 p-2.5 ml-1 mt-0 rounded-full items-center justify-center"></div></p>: <p className="text-2xl bold text-yellow decoration-8 font-semibold flex">Mentors Available</p>}
         
              <div className="flex items-center">
-             <div className="pr-3 pt-1/2"><Search1/></div>
+             <div className="pr-3 pt-1/2 hidden sm:block"><Search1/></div>
               <Menu as="div" className="relative inline-block text-left flex">
                 <div>
                   <Menu.Button className="ml-5 group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900">
@@ -347,16 +348,16 @@ const products = [
         <div className="text-yellow mx-auto max-w-2xl py-8 px-4 sm:py-8 sm:px-6 lg:max-w-7xl lg:px-8">
         
           <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-            {products.map((product) => (
-              <a key={product.id}  className="group">
-                <div className="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">
+            {filteredMentors.map((doc) => (
+              <a key={doc.id}  className="group">
+                <div className="sm:aspect-w-1 sm:aspect-h-1 aspect-h-0.2 aspect-w-0.2 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">
                   <img
-                    src={product.imageSrc}
-                    alt={product.imageAlt}
                     className="h-full w-full object-cover object-center group-hover:opacity-75"
+                    src="https://drive.google.com/uc?export=view&id=1oZgWjXKlYzaSzMRr_87qF1BpgLOzCxa6"
                   />
-                  <button onClick={handleFriendRequest} className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 py-3 px-8 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Request</button>
+                  <button onClick={() => handleFriendRequest(doc.id)} className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 py-3 px-8 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Request</button>
                 </div>
+                <button onClick={()=>handleView(doc.id)}>View Profile</button>
 
 
                 {isButtonVisible && 
@@ -364,8 +365,8 @@ const products = [
 }
 
                 
-                <h3 className="mt-4 text-sm text-gray-700">{product.name}</h3>
-                <p className="mt-1 text-lg font-medium text-gray-900">{product.price}</p>
+                <h3 className="mt-4 text-sm text-gray-700 text-center">{doc.data.firstName}{" "}{doc.data.lastName}</h3>
+                <p className="mt-1 text-lg font-medium text-gray-900"></p>
               </a>
             ))}
           </div>

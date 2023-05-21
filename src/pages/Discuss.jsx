@@ -11,7 +11,7 @@ const subjects = [
 	{ name: 'My Groups', href: '#', current: false },
 	{ name: 'Friends', href: '#', current: false },
   ]
-
+//https://drive.google.com/uc?export=view&id=1hVfPitn3aIPZUTzD3JDV6R9h4WO4CS6D
 function classNames(...classes) {
 	return classes.filter(Boolean).join(' ')
   }
@@ -27,37 +27,37 @@ export default function Discuss(){
 		<div class="cursor-pointer mb-4 border-b border-black pb-2">
 			<div
 				class="bg-black h-12 w-12 flex items-center justify-center text-black text-2xl font-semibold rounded-3xl mb-1 overflow-hidden">
-				<img src="src\assets\react.svg" alt="" />
+				<img src="https://drive.google.com/uc?export=view&id=1aN-lNhJdXvH2Ax-qNFGW4iJbqZTiQKe4" alt="" />
             </div>
 			</div>
 			<div class="cursor-pointer mb-4">
 				<div
 					class="bg-black h-12 w-12 flex items-center justify-center text-black text-2xl font-semibold rounded-xl mb-1 overflow-hidden">
-					<img src="src\assets\react.svg" alt="" />
+					<img src="https://drive.google.com/uc?export=view&id=1aN-lNhJdXvH2Ax-qNFGW4iJbqZTiQKe4" alt="" />
             </div>
 				</div>
 				<div class="cursor-pointer mb-4">
 					<div
 						class="bg-black h-12 w-12 flex items-center justify-center text-black text-2xl font-semibold rounded-3xl mb-1 overflow-hidden">
-						<img src="src\assets\react.svg" alt="" />
+						<img src="https://drive.google.com/uc?export=view&id=1aN-lNhJdXvH2Ax-qNFGW4iJbqZTiQKe4" alt="" />
             </div>
 					</div>
 					<div class="cursor-pointer mb-4">
 						<div
 							class="bg-black h-12 w-12 flex items-center justify-center text-black text-2xl font-semibold rounded-3xl mb-1 overflow-hidden">
-							<img src="src\assets\react.svg" alt="" />
+							<img src="https://drive.google.com/uc?export=view&id=1aN-lNhJdXvH2Ax-qNFGW4iJbqZTiQKe4" alt="" />
             </div>
 						</div>
 						<div class="cursor-pointer mb-4">
 							<div
 								class="bg-black h-12 w-12 flex items-center justify-center text-black text-2xl font-semibold rounded-3xl mb-1 overflow-hidden">
-								<img src="src\assets\react.svg" alt="" />
+								<img src="https://drive.google.com/uc?export=view&id=1aN-lNhJdXvH2Ax-qNFGW4iJbqZTiQKe4" alt="" />
             </div>
 							</div>
 							<div class="cursor-pointer mb-4">
 								<div
 									class="bg-black h-12 w-12 flex items-center justify-center text-black text-2xl font-semibold rounded-3xl mb-1 overflow-hidden">
-									<img src="src\assets\react.svg" alt="" />
+									<img src="https://drive.google.com/uc?export=view&id=1aN-lNhJdXvH2Ax-qNFGW4iJbqZTiQKe4" alt="" />
             </div>
 								</div>
 								<div class="cursor-pointer">
@@ -199,7 +199,7 @@ export default function Discuss(){
 								<div class="px-6 py-4 flex-1 overflow-y-scroll">
 							
 									<div class="border-b border-gray-600 py-3 flex items-start mb-4 text-sm">
-										<img src="src\assets\undraw_Male_avatar_re_nyu5 (1).png" class="cursor-pointer w-10 h-10 rounded-3xl mr-3" />
+										<img src="https://drive.google.com/uc?export=view&id=1hVfPitn3aIPZUTzD3JDV6R9h4WO4CS6D" class="cursor-pointer w-10 h-10 rounded-3xl mr-3" />
 										<div class="flex-1 overflow-hidden">
 											<div>
 												<span class="font-bold text-yellow cursor-pointer hover:underline">User</span>
@@ -211,7 +211,7 @@ export default function Discuss(){
 								
 						
 									<div class="border-b border-gray-600 py-3 flex items-start mb-4 text-sm">
-										<img src="src\assets\undraw_Male_avatar_re_nyu5 (1).png" class="cursor-pointer w-10 h-10 rounded-3xl mr-3" />
+										<img src="https://drive.google.com/uc?export=view&id=1hVfPitn3aIPZUTzD3JDV6R9h4WO4CS6D" class="cursor-pointer w-10 h-10 rounded-3xl mr-3" />
 										<div class="flex-1 overflow-hidden">
 											<div>
 												<span class="font-bold text-yellow cursor-pointer hover:underline">User</span>
@@ -222,7 +222,7 @@ export default function Discuss(){
 									</div>
 									
 									<div class="border-b border-gray-600 py-3 flex items-start mb-4 text-sm">
-										<img src="src\assets\undraw_Male_avatar_re_nyu5 (1).png" class="cursor-pointer w-10 h-10 rounded-3xl mr-3" />
+										<img src="https://drive.google.com/uc?export=view&id=1hVfPitn3aIPZUTzD3JDV6R9h4WO4CS6D" class="cursor-pointer w-10 h-10 rounded-3xl mr-3" />
 										<div class="flex-1 overflow-hidden">
 											<div>
 												<span class="font-bold text-yellow cursor-pointer hover:underline">User</span>
@@ -233,7 +233,7 @@ export default function Discuss(){
 									</div>
 								
 									<div class="border-b border-gray-600 py-3 flex items-start mb-4 text-sm">
-										<img src="src\assets\undraw_Male_avatar_re_nyu5 (1).png" class="cursor-pointer w-10 h-10 rounded-3xl mr-3" />
+										<img src="https://drive.google.com/uc?export=view&id=1hVfPitn3aIPZUTzD3JDV6R9h4WO4CS6D" class="cursor-pointer w-10 h-10 rounded-3xl mr-3" />
 										<div class="flex-1 overflow-hidden">
 											<div>
 												<span class="font-bold text-yellow cursor-pointer hover:underline">User</span>
@@ -244,7 +244,7 @@ export default function Discuss(){
 									</div>
 								
 									<div class="border-b border-gray-600 py-3 flex items-start mb-4 text-sm">
-										<img src="src\assets\undraw_Male_avatar_re_nyu5 (1).png" class="cursor-pointer w-10 h-10 rounded-3xl mr-3" />
+										<img src="https://drive.google.com/uc?export=view&id=1hVfPitn3aIPZUTzD3JDV6R9h4WO4CS6D" class="cursor-pointer w-10 h-10 rounded-3xl mr-3" />
 										<div class="flex-1 overflow-hidden">
 											<div>
 												<span class="font-bold text-yellow cursor-pointer hover:underline">User</span>
@@ -255,7 +255,7 @@ export default function Discuss(){
 									</div>
 									
 									<div class="border-b border-gray-600 py-3 flex items-start mb-4 text-sm">
-										<img src="src\assets\undraw_Male_avatar_re_nyu5 (1).png" class="cursor-pointer w-10 h-10 rounded-3xl mr-3" />
+										<img src="https://drive.google.com/uc?export=view&id=1hVfPitn3aIPZUTzD3JDV6R9h4WO4CS6D" class="cursor-pointer w-10 h-10 rounded-3xl mr-3" />
 										<div class="flex-1 overflow-hidden">
 											<div>
 												<span class="font-bold text-yellow cursor-pointer hover:underline">User</span>
@@ -266,7 +266,7 @@ export default function Discuss(){
 									</div>
 									
 									<div class="border-b border-gray-600 py-3 flex items-start mb-4 text-sm">
-										<img src="src\assets\undraw_Male_avatar_re_nyu5 (1).png" class="cursor-pointer w-10 h-10 rounded-3xl mr-3" />
+										<img src="https://drive.google.com/uc?export=view&id=1hVfPitn3aIPZUTzD3JDV6R9h4WO4CS6D" class="cursor-pointer w-10 h-10 rounded-3xl mr-3" />
 										<div class="flex-1 overflow-hidden">
 											<div>
 												<span class="font-bold text-yellow cursor-pointer hover:underline">User</span>
@@ -277,7 +277,7 @@ export default function Discuss(){
 									</div>
 									
 									<div class="border-b border-gray-600 py-3 flex items-start mb-4 text-sm">
-										<img src="src\assets\undraw_Male_avatar_re_nyu5 (1).png" class="cursor-pointer w-10 h-10 rounded-3xl mr-3" />
+										<img src="https://drive.google.com/uc?export=view&id=1hVfPitn3aIPZUTzD3JDV6R9h4WO4CS6D" class="cursor-pointer w-10 h-10 rounded-3xl mr-3" />
 										<div class="flex-1 overflow-hidden">
 											<div>
 												<span class="font-bold text-yellow cursor-pointer hover:underline">User</span>
@@ -288,7 +288,7 @@ export default function Discuss(){
 									</div>
 									
 									<div class="border-b border-gray-600 py-3 flex items-start mb-4 text-sm">
-										<img src="src\assets\undraw_Male_avatar_re_nyu5 (1).png" class="cursor-pointer w-10 h-10 rounded-3xl mr-3" />
+										<img src="https://drive.google.com/uc?export=view&id=1hVfPitn3aIPZUTzD3JDV6R9h4WO4CS6D" class="cursor-pointer w-10 h-10 rounded-3xl mr-3" />
 										<div class="flex-1 overflow-hidden">
 											<div>
 												<span class="font-bold text-yellow cursor-pointer hover:underline">User</span>
@@ -299,7 +299,7 @@ export default function Discuss(){
 									</div>
 						
 									<div class="border-b border-gray-600 py-3 flex items-start mb-4 text-sm">
-										<img src="src\assets\undraw_Male_avatar_re_nyu5 (1).png" class="cursor-pointer w-10 h-10 rounded-3xl mr-3" />
+										<img src="https://drive.google.com/uc?export=view&id=1hVfPitn3aIPZUTzD3JDV6R9h4WO4CS6D" class="cursor-pointer w-10 h-10 rounded-3xl mr-3" />
 										<div class="flex-1 overflow-hidden">
 											<div>
 												<span class="font-bold text-yellow cursor-pointer hover:underline">User</span>
@@ -310,7 +310,7 @@ export default function Discuss(){
 									</div>
 								
 									<div class="border-b border-gray-600 py-3 flex items-start mb-4 text-sm">
-										<img src="src\assets\undraw_Male_avatar_re_nyu5 (1).png" class="cursor-pointer w-10 h-10 rounded-3xl mr-3" />
+										<img src="https://drive.google.com/uc?export=view&id=1hVfPitn3aIPZUTzD3JDV6R9h4WO4CS6D" class="cursor-pointer w-10 h-10 rounded-3xl mr-3" />
 										<div class="flex-1 overflow-hidden">
 											<div>
 												<span class="font-bold text-yellow cursor-pointer hover:underline">User</span>
@@ -321,7 +321,7 @@ export default function Discuss(){
 									</div>
 									
 									<div class="border-b border-gray-600 py-3 flex items-start mb-4 text-sm">
-										<img src="src\assets\undraw_Male_avatar_re_nyu5 (1).png" class="cursor-pointer w-10 h-10 rounded-3xl mr-3" />
+										<img src="https://drive.google.com/uc?export=view&id=1hVfPitn3aIPZUTzD3JDV6R9h4WO4CS6D" class="cursor-pointer w-10 h-10 rounded-3xl mr-3" />
 										<div class="flex-1 overflow-hidden">
 											<div>
 												<span class="font-bold text-yellow cursor-pointer hover:underline">User</span>
@@ -332,7 +332,7 @@ export default function Discuss(){
 									</div>
 								
 									<div class="border-b border-gray-600 py-3 flex items-start mb-4 text-sm">
-										<img src="src\assets\undraw_Male_avatar_re_nyu5 (1).png" class="cursor-pointer w-10 h-10 rounded-3xl mr-3" />
+										<img src="https://drive.google.com/uc?export=view&id=1hVfPitn3aIPZUTzD3JDV6R9h4WO4CS6D" class="cursor-pointer w-10 h-10 rounded-3xl mr-3" />
 										<div class="flex-1 overflow-hidden">
 											<div>
 												<span class="font-bold text-yellow cursor-pointer hover:underline">User</span>
@@ -343,7 +343,7 @@ export default function Discuss(){
 									</div>
 								
 									<div class="border-b border-gray-600 py-3 flex items-start mb-4 text-sm">
-										<img src="src\assets\undraw_Male_avatar_re_nyu5 (1).png" class="cursor-pointer w-10 h-10 rounded-3xl mr-3" />
+										<img src="https://drive.google.com/uc?export=view&id=1hVfPitn3aIPZUTzD3JDV6R9h4WO4CS6D" class="cursor-pointer w-10 h-10 rounded-3xl mr-3" />
 										<div class="flex-1 overflow-hidden">
 											<div>
 												<span class="font-bold text-yellow cursor-pointer hover:underline">User</span>
@@ -354,7 +354,7 @@ export default function Discuss(){
 									</div>
 									
 									<div class="border-b border-gray-600 py-3 flex items-start mb-4 text-sm">
-										<img src="src\assets\undraw_Male_avatar_re_nyu5 (1).png" class="cursor-pointer w-10 h-10 rounded-3xl mr-3" />
+										<img src="https://drive.google.com/uc?export=view&id=1hVfPitn3aIPZUTzD3JDV6R9h4WO4CS6D" class="cursor-pointer w-10 h-10 rounded-3xl mr-3" />
 										<div class="flex-1 overflow-hidden">
 											<div>
 												<span class="font-bold text-yellow cursor-pointer hover:underline">User</span>

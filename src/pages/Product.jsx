@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { StarIcon } from '@heroicons/react/20/solid'
 import { RadioGroup } from '@headlessui/react'
 import Navigation from './Navigation'
+import { useNavigate } from 'react-router-dom'
 
 const product = {
   name: 'Electrostatics Handwritten Notes',
@@ -13,20 +14,20 @@ const product = {
   ],
   images: [
     {
-      src: 'src\\assets\\ELECTROSTATICS-HANDWRITTEN-NOTES-16.webp',
-      alt: 'Two each of gray, white, and black shirts laying flat.',
+      src: 'https://drive.google.com/uc?export=view&id=17wCqvLkOiKN3ZDaaUc3QD8BJpvr8d3bp',
+      alt: '',
     },
     {
-      src: 'src\\assets\\ELECTROSTATICS-HANDWRITTEN-NOTES-16.webp',
-      alt: 'Model wearing plain black basic tee.',
+      src: 'https://drive.google.com/uc?export=view&id=15sWK-0Jj_aapwGJBxP-VPAr2s5RNb_wa',
+      alt: '',
     },
     {
-      src: 'src\\assets\\ELECTROSTATICS-HANDWRITTEN-NOTES-16.webp',
-      alt: 'Model wearing plain gray basic tee.',
+      src: 'https://drive.google.com/uc?export=view&id=15sWK-0Jj_aapwGJBxP-VPAr2s5RNb_wa',
+      alt: '',
     },
     {
-      src: 'src\\assets\\ELECTROSTATICS-HANDWRITTEN-NOTES-16.webp',
-      alt: 'Model wearing plain white basic tee.',
+      src: 'https://drive.google.com/uc?export=view&id=15sWK-0Jj_aapwGJBxP-VPAr2s5RNb_wa',
+      alt: '',
     },
   ],
   colors: [
@@ -63,6 +64,11 @@ function classNames(...classes) {
 export default function Product() {
   const [selectedColor, setSelectedColor] = useState(product.colors[0])
   const [selectedSize, setSelectedSize] = useState(product.sizes[2])
+  const navigate = useNavigate();
+
+  function goCart(){
+    navigate('/cart');
+  }
 
   return (
     <>
@@ -144,11 +150,13 @@ export default function Product() {
               
 
               <button
+              onClick={goCart}
                 type="submit"
                 className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-green py-3 px-8 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
               >
                Buy
               </button>
+             
             </form>
           </div>
 

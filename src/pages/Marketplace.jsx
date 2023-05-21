@@ -63,7 +63,7 @@ export default function Marketplace(){
           id: 1,
           name: 'Carbony Compunds Notes',
           href: '#',
-          imageSrc: 'src\\assets\\CARBONYL-COMPOUND-13-732x1024.webp',
+          imageSrc: 'https://drive.google.com/uc?export=view&id=17wCqvLkOiKN3ZDaaUc3QD8BJpvr8d3bp',
           imageAlt: "Front of men's Basic Tee in black.",
           price: 'Rs.35',
           color: 'Black',
@@ -72,7 +72,7 @@ export default function Marketplace(){
             id: 1,
             name: 'Electrostatics Handwritten Notes',
             href: '#',
-            imageSrc: 'src\\assets\\ELECTROSTATICS-HANDWRITTEN-NOTES-16.webp',
+            imageSrc: 'https://drive.google.com/uc?export=view&id=15sWK-0Jj_aapwGJBxP-VPAr2s5RNb_wa',
             imageAlt: "Front of men's Basic Tee in black.",
             price: 'Rs.35',
             color: 'Black',
@@ -81,7 +81,7 @@ export default function Marketplace(){
             id: 1,
             name: 'Thermodynamics Physics Notes',
             href: '#',
-            imageSrc: 'src\\assets\\CARBONYL-COMPOUND-13-732x1024.webp',
+            imageSrc: 'https://drive.google.com/uc?export=view&id=15sWK-0Jj_aapwGJBxP-VPAr2s5RNb_wa',
             imageAlt: "Front of men's Basic Tee in black.",
             price: 'Rs.35',
             color: 'Black',
@@ -90,7 +90,7 @@ export default function Marketplace(){
             id: 1,
             name: 'Important Repeated Questions for NEET',
             href: '#',
-            imageSrc: 'src\\assets\\ELECTROSTATICS-HANDWRITTEN-NOTES-16.webp',
+            imageSrc: 'https://drive.google.com/uc?export=view&id=15sWK-0Jj_aapwGJBxP-VPAr2s5RNb_wa',
             imageAlt: "Front of men's Basic Tee in black.",
             price: 'Rs.35',
             color: 'Black',
@@ -99,7 +99,7 @@ export default function Marketplace(){
             id: 1,
             name: 'Circles Cheatsheet [All Formulas]',
             href: '#',
-            imageSrc: 'src\\assets\\CARBONYL-COMPOUND-13-732x1024.webp',
+            imageSrc: 'https://drive.google.com/uc?export=view&id=15sWK-0Jj_aapwGJBxP-VPAr2s5RNb_wa',
             imageAlt: "Front of men's Basic Tee in black.",
             price: 'Rs.35',
             color: 'Black',
@@ -112,7 +112,7 @@ export default function Marketplace(){
    <Navigation/>
 
      <div className="bg-yellow flex text-black">
-     <div className="w-1/4 p-5">
+     <div className="w-1/4 p-5 hidden sm:block">
      <a href="/view"><button className="ml-5 bg-green text-black font-medium py-2 px-4 rounded-lg hover:bg-green-600 mb-4">Create Post</button></a>
           <h2 className="bold decoration-8 font-semibold mt-3">Filters</h2>
           <form className="mt-4 border-t border-gray-200">
@@ -175,7 +175,7 @@ export default function Marketplace(){
         <div className="flex text-black justify-between p-3">
         <p className="text-3xl bold text-black font-semibold flex p-4 ml-1">Latest Posts</p>        
         <div className="flex items-center">
-             <div className="p-5"><Search/></div>
+             <div className="p-5 hidden sm:block"><Search/></div>
               <Menu as="div" className="relative inline-block text-left flex">
                 <div>
                   <Menu.Button className="ml-5 group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900">

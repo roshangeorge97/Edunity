@@ -24,7 +24,7 @@ export default function Profile(){
           <div class="flex flex-wrap justify-center">
             <div class="w-full lg:w-3/12 px-4 lg:order-2 flex justify-center">
               <div class="relative">
-                <img alt="..." src="src\assets\undraw_Male_avatar_re_nyu5 (1).png" class="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-150-px" />
+                <img alt="..." src="https://drive.google.com/uc?export=view&id=1oZgWjXKlYzaSzMRr_87qF1BpgLOzCxa6" class="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-150-px" />
               </div>
             </div>
             <div class="w-full lg:w-4/12 px-4 lg:order-3 lg:text-right lg:self-center">

@@ -14,7 +14,7 @@ const navigation = [
   { name: 'Explore', href: '/mentors', current: true },
   { name: 'My Classes', href: '/classes', current: false },
   { name: 'Marketplace', href: '/marketplace', current: false },
-  { name: 'Discuss', href: '/discuss', current: false },
+  {  name: 'Signup', href: '/signup', current: false }
 
 ]
 
@@ -86,12 +86,12 @@ return () => unsub();
                 <div className="flex flex-shrink-0 items-center">
                   <a href='/'><img
                     className="block h-8 w-auto lg:hidden"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                    src="https://drive.google.com/uc?export=view&id=1AZBHxBPq0Es_DqHzWMzQ6PvBFEYWBoAb"
                     alt="Your Company"
                   />
                   <img
                     className="hidden h-8 w-auto lg:block"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                    src="https://drive.google.com/uc?export=view&id=1AZBHxBPq0Es_DqHzWMzQ6PvBFEYWBoAb"
                     alt="Your Company"
                   />
                   </a>
@@ -115,8 +115,8 @@ return () => unsub();
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <a href='/mentor'><button className='text-yellow ml-5 bg-green text-black font-medium py-2 px-4 rounded-lg hover:bg-green'>Become a Mentor</button></a>
-               <a href='/cart'><div className='ml-3'> <svg fill="#E9D758" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                <a href='/mentor'><button className='hidden sm:block text-yellow ml-5 bg-green text-black font-medium py-2 px-4 rounded-lg hover:bg-green'>Become a Mentor</button></a>
+               <a href='/cart'><div className='hidden sm:block ml-3'> <svg fill="#E9D758" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
 	 width="20px" height="20px" viewBox="0 0 902.86 902.86"
 	 xml:space="preserve">
 <g>
@@ -135,11 +135,11 @@ return () => unsub();
 </svg>
 </div>
 </a>
-    <a href='/feed'><button className="block px-4 py-2 text-sm text-yellow">Feed</button></a>
+    <a href='/feed'><button className="hidden sm:block px-4 py-2 text-sm text-yellow">Feed</button></a>
              
                 <button
                   type="button"
-                  className="rounded-full bg-yellow-800 p-1 text-yellow hover:text-yellow focus:outline-none focus:ring-2 focus:ring-yellow focus:ring-offset-2 focus:ring-offset-gray-800"
+                  className="hidden sm:block rounded-full bg-yellow-800 p-1 text-yellow hover:text-yellow focus:outline-none focus:ring-2 focus:ring-yellow focus:ring-offset-2 focus:ring-offset-gray-800"
                 >
                   <span className="sr-only">View notifications</span>
                   <a href='/requests'>
@@ -160,7 +160,7 @@ return () => unsub();
                       <span className="sr-only">Open user menu</span>
                       <img
                         className="h-8 w-8 rounded-full"
-                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        src="https://drive.google.com/uc?export=view&id=1Dd3Vsx2Xz0lmoMZrwPWcd-ir-6oGRue8"
                         alt=""
                       />
                     </Menu.Button>
@@ -234,7 +234,7 @@ return () => unsub();
                   as="a"
                   href={item.href}
                   className={classNames(
-                    item.current ? 'bg-yellow-900 text-yellow' : 'text-gray-300 hover:bg-yellow-700 hover:text-yellow',
+                    item.current ? 'bg-yellow-900 text-yellow' : 'text-yellow hover:bg-yellow-900 hover:text-yellow',
                     'block px-3 py-2 rounded-md text-base font-medium'
                   )}
                   aria-current={item.current ? 'page' : undefined}
