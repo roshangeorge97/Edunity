@@ -140,6 +140,17 @@ To get a local copy up and running follow these simple example steps.
    ```sh
    npm install
    ```
+   
+3. Run the project locally
+   ```sh
+   npm run dev
+   ```
+
+4. Activate Tailwind CSS on another terminal in the cloned directory
+   ```sh
+   npx tailwindcss -i ./src/App.css -o ./dist/output.css --watch
+   ```
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
