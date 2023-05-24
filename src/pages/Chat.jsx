@@ -5,45 +5,41 @@ import { db } from "../../firebase-config";
 import { useState } from "react";
 import { getAuth } from "firebase/auth";
 import { useLocation } from "react-router-dom";
+import { getDocs } from "firebase/firestore";
+import { collection } from "firebase/firestore";
 
 
 export default function Chat() {   
   const { state } = useLocation();
-    const [data, setData] = useState([]); 
+  const [mentors,setMentors] = useState([]);
 
     useEffect(() => {  
       mentorsget();
     },[])
   
+
     const mentorsget= async ()=>{
+  
+      const data = await getDocs(collection(db, "mentors"));
+      // doc.data() is never undefined for query doc snapshots
+      console.log(data.docs);
+      setMentors(data.docs.map((doc)=>({ ...doc.data(), id: doc.id})))
       
-      const docRef = doc(db, "mentors", state.post_id);
-      const docSnap = await getDoc(docRef);
-      
-      if (docSnap.exists()) {
-        const data =  docSnap.data().data;
-        console.log(data)
-        setData(JSON.stringify(data))
-      } else {
-        // docSnap.data() will be undefined in this case
-        console.log("No such document!");
-      }
-  }
+          }
     return (
       <>
-      
-      <Navigation/>
-         <head>
+       <head>
         <link href="/dist/output.css" rel="stylesheet"></link>
-      </head>
-      {data && Object.keys(data).length > 0 && 
+      </head> 
+      <Navigation/>
+        
+      {mentors.map((doc) => (
 <div class="rounded flex h-screen antialiased text-black bg-yellow px-2">
     <div class="flex flex-row h-full w-full overflow-x-hidden">
     <div>
 
 <div class="mt-8 text-center">
     <img src="https://drive.google.com/uc?export=view&id=1Dd3Vsx2Xz0lmoMZrwPWcd-ir-6oGRue8" alt="" class="w-10 h-10 m-auto rounded-full object-cover lg:w-28 lg:h-28" />
-    <h5 class="hidden mt-4 text-xl font-semibold text-gray-600 lg:block">{`${JSON.parse(data).firstName} ${JSON.parse(data).lastName}`}</h5>
     <span class="hidden text-gray-400 lg:block">IIT Madras</span>
 </div>
 
@@ -90,7 +86,6 @@ export default function Chat() {
                 <path class="fill-current text-gray-300 group-hover:text-cyan-300" d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z" />
                 <path class="fill-current text-gray-600 group-hover:text-cyan-600" fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd" />
             </svg>
-            <span class="group-hover:text-gray-700">{`${JSON.parse(data).phone}`}</span>
         </a>
     </li>
 </ul>
@@ -340,6 +335,7 @@ export default function Chat() {
       </div>
     </div>
   </div>
+      ))
 }
   </>
   )
