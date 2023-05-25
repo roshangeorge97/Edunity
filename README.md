@@ -158,6 +158,18 @@ To get a local copy up and running follow these simple example steps.
 <!-- ROADMAP -->
 ## Roadmap
 
+### Frontend
+
+- [ ] Requests Page
+    - [ ] Fix UI of Requests page
+- [x] Add appropriate favicon
+
+### Backend
+
+- [ ] Discuss Page
+    - [ ] Websocket Integration on Discuss page by creating something similar to chat rooms
+- [ ] Feed Page
+    - [ ] Use Thirdparty REST APIs to display news on Feed Section
 - [ ] Chat Page
     - [ ] Display only the selected Mentor's chat on chat page not all of them.
     - [ ] Simple Websocket Integration to chat amoung mentors and students
@@ -167,12 +179,7 @@ To get a local copy up and running follow these simple example steps.
     - [ ] Implement CRUD Operations with firebase on Marketplace
 - [ ] Checkout Page
     - [ ] Interate with stripe
-- [ ] Discuss Page
-    - [ ] Websocket Integration on Discuss page by creating something similar to chat rooms
-- [ ] Feed Page
-    - [ ] Use Thirdparty REST APIs to display news on Feed Section
-- [ ] Requests Page
-    - [ ] Fix UI of Requests page
+
 
 
 See the [open issues](https://github.com/roshangeorge97/Edunity/issues) for a full list of proposed features (and known issues).
