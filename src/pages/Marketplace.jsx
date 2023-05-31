@@ -115,7 +115,7 @@ export default function Marketplace() {
 	];
 
 	return (
-		<>
+		<div id='marketplace'>
 			<Navigation />
 
 			<div className="bg-yellow flex text-black">
@@ -322,6 +322,6 @@ export default function Marketplace() {
 					</div>
 				</div>
 			</div>
-		</>
+		</div>
 	);
 }

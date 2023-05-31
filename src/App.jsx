@@ -23,6 +23,7 @@ import Wallet from "./pages/Wallet"
 import Profile from "./pages/Profile"
 import { ViewProfile } from "./pages/ViewProfile"
 import GoToTop from "./pages/GoToTop/GoToTop";
+import Footer from "./pages/Footer/Footer"
 
 function App() {
   return (
@@ -55,6 +56,7 @@ function App() {
           <Route path="/mentorprofile" element={<ViewProfile />}></Route>
         </Routes>
       </BrowserRouter>
+      <Footer/>
     </>
   )
 }
