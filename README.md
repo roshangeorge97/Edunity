@@ -204,7 +204,11 @@ Don't forget to give the project a star! Thanks again!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## Project Contributors
 
+<a href="https://github.com/roshangeorge97/Edunity/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=roshangeorge97/Edunity" />
+</a>
 
 <!-- LICENSE -->
 ## License
