@@ -1,0 +1,114 @@
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: #000;
+    padding-left: 20px;
+    margin-left: 50px;
+} 
+
+
+.Left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.logo{
+    font-size: 30px;
+    font-weight: bold;
+    color: yellowgreen;
+    margin-bottom: 20px;
+}
+
+.Desc {
+  margin: 20px 0px;
+}
+.SocialContainer {
+  display: flex;
+}
+.SocialIcon{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: white;
+  background-color: rgb(3, 39, 3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+#facebook:hover{
+  background-color: #3b5998;
+}
+#linkedin:hover{
+  background-color: #0077b5;
+}
+#twitter:hover{
+  background-color: #55acee;
+} 
+#discord:hover{
+  background-color: #7289da;
+}
+
+
+.Center {
+  flex: 1;
+  padding: 20px;
+}
+.Title{
+    margin-bottom: 30px;
+}
+
+
+
+.List{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.ListItem{
+    width: 50%;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+.ListItem:hover {
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-color: yellow;
+}
+
+
+.Right{
+    flex: 1;
+    padding: 20px;
+}
+
+
+.ContactItem{
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.Payment{
+    width: 50%;
+}
+
+.fpart{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+}
