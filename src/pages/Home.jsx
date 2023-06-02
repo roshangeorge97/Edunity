@@ -23,31 +23,31 @@ function Home() {
       </head>
       <Navigation />
 
-      <div className="relative overflow-hidden bg-black">
-        <div className="flex pt-16 pb-24 sm:pt-24 sm:pb-0 lg:pt-40 lg:pb-16">
-          <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 py-8 sm:py-0 lg:px-8">
-            <div className="sm:max-w-lg">
-              <h1 className="font text-4xl font-bold tracking-tight text-yellow sm:text-6xl">
-                Find Your Personal Mentor, boost Grades!
-              </h1>
-              <p className="mt-4 text-xl text-yellow">
-                Spend few minutes finding your mentor, for lifetime success!
-              </p>
-            </div>
-            <div>
-              <div className="mt-10">
-                {/* Decorative image grid */}
-                <a
-                  href="/mentors"
-                  className="text-black inline-block rounded-md border border-transparent bg-yellow py-3 px-8 text-center font-medium text-white hover:bg-green hover:text-yellow"
-                >
-                  Find Mentor
-                </a>
-              </div>
+
+    <div className="relative overflow-hidden bg-black">
+      <div className="flex flex-col sm:flex-row pt-16 pb-24 sm:pt-24 sm:pb-0 lg:pt-40 lg:pb-16 ">
+        <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 py-8 sm:py-0 lg:px-8">
+          <div className="sm:max-w-lg">
+            <h1 className="font text-4xl font-bold tracking-tight text-yellow sm:text-6xl">
+              Find Your Personal Mentor, boost Grades!
+            </h1>
+            <p className="mt-4 text-xl text-yellow">
+              Spend few minutes finding your mentor, for lifetime success!
+            </p>
+          </div>
+          <div>
+            <div className="mt-10">
+              {/* Decorative image grid */}
+              <a
+                href="/mentors"
+                className="text-black inline-block rounded-md border border-transparent bg-yellow py-3 px-8 text-center font-medium text-white hover:bg-green hover:text-yellow"
+              >
+                Find Mentor
+              </a>
             </div>
           </div>
-          <img className='hidden w-3x1 h-3x1 sm:block' src='https://drive.google.com/uc?export=view&id=1vBY6fqRWPov53eKDNqTOpEkYjPgmRPQP' />
-        </div>
+        </div>                                                                                         
+       <img className='w-3x1 h-3x1 order-first sm:order-last' src='https://drive.google.com/uc?export=view&id=1vBY6fqRWPov53eKDNqTOpEkYjPgmRPQP'/>         
       </div>
 
       <div className="relative overflow-hidden bg-yellow text-black">
