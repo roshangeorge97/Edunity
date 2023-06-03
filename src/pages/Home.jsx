@@ -55,29 +55,30 @@ function Home() {
         <div className="md:mx-auto mx-4 flex flex-col items-center justify-between md:flex-row gap-x-5 gap-y-5 max-w-7xl py-12 px-4 sm:px-6">
           <img className='block order-last md:order-first w-full max-w-md md:max-w-lg md:w-2/5' src='https://drive.google.com/uc?export=view&id=1M6D9s9CKLUADEaIlhWsTmMLn43IpoTHW' />
           <div className="w-full md:max-w-lg">
+            <div className="relative overflow-hidden bg-yellow text-black">
+              <div className="flex pt-8 pb-0 sm:pt-24 sm:pb-24 lg:pt-40 lg:pb-16">
+                <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8  py-8 sm:py-0 ">
 
-      <div className="relative overflow-hidden bg-yellow text-black">
-        <div className="flex pt-8 pb-0 sm:pt-24 sm:pb-24 lg:pt-40 lg:pb-16">
-          <img className='w-3x1 h-3x1 hidden sm:block' src='https://drive.google.com/uc?export=view&id=1M6D9s9CKLUADEaIlhWsTmMLn43IpoTHW' />
-          <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8  py-8 sm:py-0 ">
-
-            <div className="sm:max-w-lg">
-              <h1 className="font text-4xl font-bold tracking-tight text-black sm:text-6xl">
-                Register as mentor, start your side hustle!
-              </h1>
-              <p className="mt-4 text-xl text-black">
-                Perks of Being a Mentor?
-              </p>
-            </div>
-            <div>
-              <div className="mt-10">
-                {/* Decorative image grid */}
-                <a
-                  href="/mentors"
-                  className=" text-black inline-block rounded-md border border-transparent bg-yellow py-3 px-8 text-center font-medium text-white hover:bg-green hover:text-yellow"
-                >
-                  Learn More
-                </a>
+                  <div className="sm:max-w-lg">
+                    <h1 className="font text-4xl font-bold tracking-tight text-black sm:text-6xl">
+                      Register as mentor, start your side hustle!
+                    </h1>
+                    <p className="mt-4 text-xl text-black">
+                      Perks of Being a Mentor?
+                    </p>
+                  </div>
+                  <div>
+                    <div className="mt-10">
+                      {/* Decorative image grid */}
+                      <a
+                        href="/mentors"
+                        className=" text-black inline-block rounded-md border border-transparent bg-yellow py-3 px-8 text-center font-medium text-white hover:bg-green hover:text-yellow"
+                      >
+                        Learn More
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -89,7 +90,7 @@ function Home() {
         {/* flex flex-col items-center justify-center md:flex-row gap-x-5 gap-y-10  border border-red p-10 */}
         <div className="md:mx-auto mx-4 max-w-7xl py-12 px-4 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-16 lg:px-8">
 
-        <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-16 lg:px-8">
+
 
           <h2 className="text-3xl font-bold tracking-tight text-black sm:text-4xl">
             <span className="block text-yellow">Want to Register as Mentor?</span>
@@ -113,13 +114,10 @@ function Home() {
               </a>
             </div>
           </div>
+
         </div>
       </div>
-
-    </>
-
     </div>
-
   )
 }
 
