@@ -1,4 +1,4 @@
-import { Routes, Route, BrowserRouter} from "react-router-dom"
+import { Routes, Route, BrowserRouter } from "react-router-dom"
 import Home from "./pages/Home"
 import Example from "./pages/SignIn"
 import Example1 from "./pages/Register"
@@ -22,36 +22,42 @@ import MentorView from "./pages/MentorView"
 import Wallet from "./pages/Wallet"
 import Profile from "./pages/Profile"
 import { ViewProfile } from "./pages/ViewProfile"
+import GoToTop from "./pages/GoToTop/GoToTop";
+import Footer from "./pages/Footer/Footer"
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={ <Home/> }></Route>
-        <Route path="/signin" element={ <Example/> }></Route>
-        <Route path="/register" element={ <Example1/> }></Route>
-        <Route path="/mentors" element={ <Mentors/> }></Route>
-        <Route path="/chat" element={ <Chat/> }></Route>
-        <Route path="/students" element={ <Students/> }></Route>
-        <Route path="/signup" element={ <SignUp/> }></Route>
-        <Route path="/marketplace" element={ <Marketplace/> }></Route>
-        <Route path="/checkout" element={ <Checkout/> }></Route>
-        <Route path="/mentor" element={ <Mentor/> }></Route>
-        <Route path="/requests" element={ <Request/> }></Route>
-        <Route path="/learn" element={ <Learn/> }></Route>
-        <Route path="/view" element={ <Product/> }></Route>
-        <Route path="/update" element={ <Settings/> }></Route>
-        <Route path="/dashboard" element={ <Dashboard/> }></Route>
-        <Route path="/feed" element={ <Feed/> }></Route>
-        <Route path="/discuss" element={ <Discuss/> }></Route>
-        <Route path="/classes" element={ <Classes/> }></Route>
-        <Route path="/cart" element={ <Cart/> }></Route>
-        <Route path="/mentorview" element={ <MentorView/> }></Route>
-        <Route path="/wallet" element={ <Wallet/> }></Route>
-        <Route path="/profile" element={ <Profile/> }></Route>       
-        <Route path="/mentorprofile" element={ <ViewProfile /> }></Route>
-      </Routes>
+    <>
+      <GoToTop />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/signin" element={<Example />}></Route>
+          <Route path="/register" element={<Example1 />}></Route>
+          <Route path="/mentors" element={<Mentors />}></Route>
+          <Route path="/chat" element={<Chat />}></Route>
+          <Route path="/students" element={<Students />}></Route>
+          <Route path="/signup" element={<SignUp />}></Route>
+          <Route path="/marketplace" element={<Marketplace />}></Route>
+          <Route path="/checkout" element={<Checkout />}></Route>
+          <Route path="/mentor" element={<Mentor />}></Route>
+          <Route path="/requests" element={<Request />}></Route>
+          <Route path="/learn" element={<Learn />}></Route>
+          <Route path="/view" element={<Product />}></Route>
+          <Route path="/update" element={<Settings />}></Route>
+          <Route path="/dashboard" element={<Dashboard />}></Route>
+          <Route path="/feed" element={<Feed />}></Route>
+          <Route path="/discuss" element={<Discuss />}></Route>
+          <Route path="/classes" element={<Classes />}></Route>
+          <Route path="/cart" element={<Cart />}></Route>
+          <Route path="/mentorview" element={<MentorView />}></Route>
+          <Route path="/wallet" element={<Wallet />}></Route>
+          <Route path="/profile" element={<Profile />}></Route>
+          <Route path="/mentorprofile" element={<ViewProfile />}></Route>
+        </Routes>
       </BrowserRouter>
+      <Footer/>
+    </>
   )
 }
 

@@ -226,7 +226,7 @@ const filteredMentors = selectedSubject ? mentors.filter((doc) => doc.data.subje
         type="checkbox"
         class="appearance-none w-9 focus:outline-none checked:bg-yellow-28 h-5 bg-gray-300 rounded-full before:inline-block before:rounded-full before:bg-yellow-89 before:h-4 before:w-4 checked:before:translate-x-full shadow-inner transition-all duration-300 before:ml-0.5"
         checked={toggle}
-        onChange={()=>setToggle(true)}
+        onChange={()=>setToggle(!toggle)}
         
     />
 </div>

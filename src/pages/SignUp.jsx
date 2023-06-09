@@ -74,7 +74,7 @@ export default function SignUp() {
 // Set the user's name and email
 
   return (
-    <>
+    <div id='signup'>
       <head>
         <link href="/dist/output.css" rel="stylesheet"></link>
       </head>
@@ -162,6 +162,6 @@ export default function SignUp() {
           </form>
         </div>
       </div>
-    </>
+    </div>
   )
 }

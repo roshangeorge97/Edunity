@@ -110,9 +110,10 @@
 
 ### Built With
 
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
+[![Next][Next.js]][Next-url]
+[![React][React.js]][React-url]
+[![Bootstrap][Bootstrap.com]][Bootstrap-url]
+![Firebase](https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -157,11 +158,29 @@ To get a local copy up and running follow these simple example steps.
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Integrate Connection platform between mentors and students
-- [ ] Add CRUD actions to Marketplace
-- [ ] Improve backend architecture of frontend static pages
-    - [ ] Chat Page
-    - [ ] Mentor Profie Page
+### Frontend
+
+- [ ] Requests Page
+    - [ ] Fix UI of Requests page
+- [x] Add appropriate favicon
+
+### Backend
+
+- [ ] Discuss Page
+    - [ ] Websocket Integration on Discuss page by creating something similar to chat rooms
+- [ ] Feed Page
+    - [ ] Use Thirdparty REST APIs to display news on Feed Section
+- [ ] Chat Page
+    - [ ] Display only the selected Mentor's chat on chat page not all of them.
+    - [ ] Simple Websocket Integration to chat amoung mentors and students
+- [ ] My Classes Page
+    - [ ] Display the recently connected mentors at My Classes Page
+- [ ] Marketplace
+    - [ ] Implement CRUD Operations with firebase on Marketplace
+- [ ] Checkout Page
+    - [ ] Interate with stripe
+
+
 
 See the [open issues](https://github.com/roshangeorge97/Edunity/issues) for a full list of proposed features (and known issues).
 
@@ -185,7 +204,11 @@ Don't forget to give the project a star! Thanks again!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## Project Contributors
 
+<a href="https://github.com/roshangeorge97/Edunity/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=roshangeorge97/Edunity" />
+</a>
 
 <!-- LICENSE -->
 ## License
