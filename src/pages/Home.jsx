@@ -67,7 +67,7 @@ function Home() {
               {/* Decorative image grid */}
               <a
                 href="/mentors"
-                className=" text-black inline-block rounded-md border border-transparent bg-yellow py-3 px-8 text-center font-medium text-white hover:bg-green hover:text-yellow"
+                className=" text-black inline-block rounded-md border border-transparent bg-yellow py-3 px-8 text-center font-medium hover:bg-green hover:text-yellow transition duration-300"
               >
                 Learn More
               </a>
@@ -87,7 +87,7 @@ function Home() {
           <div className="inline-flex rounded-md shadow">
             <a
               href="/students"
-              className="inline-flex items-center justify-center rounded-md border border-transparent bg-black px-5 py-3 text-base font-medium text-yellow hover:bg-indigo-700"
+              className="inline-flex items-center justify-center rounded-md border border-transparent bg-black px-5 py-3 text-base font-medium text-yellow hover:bg-green transition duration-300"
             >
               Get started
             </a>
@@ -95,7 +95,7 @@ function Home() {
           <div className="ml-3 inline-flex rounded-md shadow">
             <a
               href="#"
-              className="inline-flex items-center justify-center rounded-md border border-transparent bg-black px-5 py-3 text-base font-medium text-yellow hover:bg-indigo-50"
+              className="inline-flex items-center justify-center rounded-md border border-transparent bg-black px-5 py-3 text-base font-medium text-yellow  hover:bg-green transition duration-300"
             >
               Learn more
             </a>
