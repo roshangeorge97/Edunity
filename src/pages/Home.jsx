@@ -100,7 +100,7 @@ function Home() {
             <div className="inline-flex rounded-md shadow">
               <a
                 href="/students"
-                className="inline-flex items-center justify-center rounded-md border border-transparent bg-black px-5 py-3 text-base font-medium text-yellow hover:bg-indigo-700"
+                className="inline-flex items-center justify-center rounded-md border border-transparent bg-black px-5 py-3 text-base font-medium text-yellow hover:bg-green transition duration-300"
               >
                 Get started
               </a>
@@ -108,7 +108,7 @@ function Home() {
             <div className="ml-3 inline-flex rounded-md shadow">
               <a
                 href="#"
-                className="inline-flex items-center justify-center rounded-md border border-transparent bg-black px-5 py-3 text-base font-medium text-yellow hover:bg-indigo-50"
+                className="inline-flex items-center justify-center rounded-md border border-transparent bg-black px-5 py-3 text-base font-medium text-yellow hover:bg-green transition duration-300"
               >
                 Learn more
               </a>
