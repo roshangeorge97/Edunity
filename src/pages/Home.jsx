@@ -40,7 +40,7 @@ function Home() {
                 {/* Decorative image grid */}
                 <a
                   href="/mentors"
-                  className="text-black inline-block rounded-md border border-transparent bg-yellow py-3 px-8 text-center font-medium text-white hover:bg-green hover:text-yellow"
+                  className="text-black inline-block rounded-md border border-transparent bg-yellow py-3 px-8 text-center font-medium hover:bg-green hover:text-yellow"
                 >
                   Find Mentor
                 </a>
