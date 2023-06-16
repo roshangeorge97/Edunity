@@ -1,13 +1,18 @@
 
+.black {
+  background-color: #000;
+}
+
 .container{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    max-width: 1280px !important;
     color: #fff;
-    background-color: #000;
-    padding-left: 20px;
-    margin-left: 50px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+
+    align-items: baseline;
+    flex-wrap: wrap;
+    padding: 0 16px;
 } 
 
 
@@ -72,8 +77,10 @@
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    align-items: center;
 }
+
+
 
 .ListItem{
     width: 50%;
@@ -108,7 +115,22 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: #000;
+    background-color: #131313;
     color: #fff;
     padding: 10px;
+}
+
+@media screen and (max-width: 592px) {
+  .Left {
+    width: 100%;
+  }
+  .Center {
+    width: 100%;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .Right {
+    width: 100%;
+  }
 }
