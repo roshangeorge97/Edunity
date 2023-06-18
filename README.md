@@ -33,7 +33,7 @@
  
   [![Logo](/Screenshots/online-learning(1).png)]()
 
-  <h3 align="center"> Edunity </h3>
+  <h3 align="center">Edunity</h3>
 
   <p align="center">
     Creating a Platform where students preparing for competitive exams can connect with their Seniors to seek guidance for improving their grades on a one-one basis.
