@@ -12,7 +12,7 @@ export default function Cart(){
           <img src="https://drive.google.com/uc?export=view&id=17wCqvLkOiKN3ZDaaUc3QD8BJpvr8d3bp" alt="product-image" class="w-full rounded-lg sm:w-40" />
           <div class="sm:ml-4 sm:flex sm:w-full sm:justify-between">
             <div class="mt-5 sm:mt-0">
-              <h2 class="text-lg font-bold text-gray-900">Electrostaics Handwritten Notes</h2>
+              <h2 class="text-lg font-bold text-gray-900">Electrostatics Handwritten Notes</h2>
               <p class="mt-1 text-xs text-gray-700">Rs.56</p>
             </div>
             <div class="mt-4 flex justify-between sm:space-y-6 sm:mt-0 sm:block sm:space-x-6">
@@ -34,7 +34,7 @@ export default function Cart(){
           <img src="https://drive.google.com/uc?export=view&id=17wCqvLkOiKN3ZDaaUc3QD8BJpvr8d3bp" alt="product-image" class="w-full rounded-lg sm:w-40" />
           <div class="sm:ml-4 sm:flex sm:w-full sm:justify-between">
             <div class="mt-5 sm:mt-0">
-              <h2 class="text-lg font-bold text-gray-900">Carbonyl Compunds Notes</h2>
+              <h2 class="text-lg font-bold text-gray-900">Carbonyl Compounds Handwritten Notes</h2>
               <p class="mt-1 text-xs text-gray-700">Rs.62</p>
             </div>
             <div class="mt-4 flex justify-between im sm:space-y-6 sm:mt-0 sm:block sm:space-x-6">
